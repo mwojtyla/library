@@ -1,0 +1,33 @@
+{
+	"info": {
+		"_postman_id": "b11a23fa-be15-451e-a46b-6e5583e2bbf7",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25785561"
+	},
+	"item": [
+		{
+			"name": "check copies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/titles/amountAvailableCopies/Remember me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"titles",
+						"amountAvailableCopies",
+						"Remember me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
