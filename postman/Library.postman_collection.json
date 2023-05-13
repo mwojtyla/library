@@ -7,12 +7,12 @@
 	},
 	"item": [
 		{
-			"name": "check copies",
+			"name": "get amount of available copies",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/v1/library/titles/amountAvailableCopies/Remember me",
+					"raw": "http://localhost:8080/v1/library/titles/amountAvailableCopies/Message in a bottle",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -23,7 +23,632 @@
 						"library",
 						"titles",
 						"amountAvailableCopies",
-						"Remember me"
+						"Message in a bottle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update title",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 562,\r\n    \"title\": \"Message in a bottle\",\r\n    \"author\": \"Nicholas Sparks\",\r\n    \"publicationYear\": 1998\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/library/titles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"titles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get titles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/titles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"titles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/titles/562",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"titles",
+						"562"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create title",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"The Lucky One\",\r\n    \"author\": \"Nicholas Sparks\",\r\n    \"publicationYear\": 2008\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/library/titles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"titles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete title",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/titles/587",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"titles",
+						"587"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get available copies of title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/titles/availableCopies/The Notebook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"titles",
+						"availableCopies",
+						"The Notebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get titles by year of publication",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/titles/titleByYear/1998",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"titles",
+						"titleByYear",
+						"1998"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get copies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/copies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"copies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/copies/568",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"copies",
+						"568"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"Available\",\r\n    \"titleId\": 562\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/library/copies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"copies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 572,\r\n    \"status\": \"Rented\",\r\n    \"titleId\": 563\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/library/copies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"copies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/copies/589",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"copies",
+						"589"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update copy status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/library/copies/572/Available",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"copies",
+						"572",
+						"Available"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create reader",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\",\r\n    \"surname\": \"Smith\",\r\n    \"accountCreationDate\": \"2022-08-20\",\r\n    \"rentalsDtoList\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/library/readers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"readers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update reader",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 565,\r\n    \"name\": \"Tom\",\r\n    \"surname\": \"Lucky\",\r\n    \"accountCreationDate\": \"2022-08-20\",\r\n    \"rentalsDtoList\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/library/readers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"readers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get raeders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/readers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"readers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get reader",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/readers/565",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"readers",
+						"565"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete reader",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/readers/590",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"readers",
+						"590"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get rentals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/rentals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"rentals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get rental",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/rentals/576",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"rentals",
+						"576"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create rental",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dateOfRental\": \"2023-01-01\",\r\n    \"dateOfReturn\": \"2023-03-03\",\r\n    \"readerId\": 565,\r\n    \"copyId\": 569\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/library/rentals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"rentals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update rental",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 591,\r\n        \"dateOfRental\": \"2023-01-01\",\r\n        \"dateOfReturn\": \"2023-02-02\",\r\n        \"readerId\": 565,\r\n        \"copyId\": 569\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/library/rentals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"rentals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete rental",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/rentals/591",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"rentals",
+						"591"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "return a book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/rentals/return/576",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"rentals",
+						"return",
+						"576"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rent a book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/library/rentals/rent/565/571",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"library",
+						"rentals",
+						"rent",
+						"565",
+						"571"
 					]
 				}
 			},
