@@ -38,7 +38,7 @@ The application provides the following services:
   - [return a book](https://docs.gradle.org)
 
 ### How to run
-To run the application use: `./gradlew bootJar`
+To run the application use: `./gradlew bootRun`
 
 ### Technologies
 
